@@ -190,6 +190,12 @@ sections:
         icon: favicon
         url: http://10.1.61.185/login
         id: 1_622_itsupport
+      - &ref_15
+        title: WEB CHAT
+        icon: favicon
+        url: http://192.168.30.147:3000/
+        id: 2_622_webchat
     filteredItems:
       - *ref_13
       - *ref_14
+      - *ref_15
