@@ -55,6 +55,13 @@ sections:
         url: https://cloud.pinusmerahabadi.co.id/
         target: newtab
         id: 6_1165_cloudpinus
+        
+widgets:   # <-- Tambahkan di sini
+      - type: iframe
+        options:
+          url: 'http://192.168.30.147:3000/livechat'
+          height: 600
+
     filteredItems:
       - *ref_0
       - *ref_1
