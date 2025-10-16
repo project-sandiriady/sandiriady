@@ -6,98 +6,190 @@ appConfig:
   theme: callisto
   layout: vertical
   iconSize: medium
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: yandex
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: false
+    searchEngine: google
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: false
+    hideFooter: false
+  auth:
+    enableGuestAccess: false
+    users: []
+    enableOidc: false
+    oidc:
+      adminRole: 'false'
+      adminGroup: 'false'
+    enableHeaderAuth: false
+    headerAuth:
+      userHeader: REMOTE_USER
+      proxyWhitelist: []
+    enableKeycloak: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
 sections:
-- name: PINUS MERAH ABADI
-  icon: fas fa-rocket
-  items:
-  - &id001
-    title: Hc Portal
-    description: Web Absensi PMA
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://hcportal.nabatisnack.co.id/login/emplogin
-    target: newtab
-    id: 0_1165_hcportal
-  - &id002
-    title: NGS
-    description: Web Bantuan Dari Nabati
-    icon: favicon
-    url: https://ngs.nabatigroup.com/login
-    target: newtab
-    id: 1_1165_ngs
-  - &id003
-    title: EDS
-    icon: favicon
-    url: https://eds.nabatisnack.co.id/
-    target: newtab
-    id: 2_1165_eds
-  - &id004
-    title: OFR
-    icon: favicon
-    url: http://ofr.pinusmerahabadi.co.id/
-    target: newtab
-    id: 3_1165_ofr
-  - &id005
-    title: PODS
-    icon: favicon
-    url: https://pods.pinusmerahabadi.co.id/dashboard
-    target: newtab
-    id: 4_1165_pods
-  - &id006
-    title: EDOT
-    icon: favicon
-    url: https://eds.nabatisnack.co.id/login
-    target: newtab
-    id: 5_1165_edot
-  - &id007
-    title: Cloud Pinus
-    description: File Sharing PMA
-    icon: favicon
-    url: https://cloud.pinusmerahabadi.co.id/
-    target: newtab
-    id: 6_1165_cloudpinus
-  filteredItems:
-  - *id001
-  - *id002
-  - *id003
-  - *id004
-  - *id005
-  - *id006
-  - *id007
-  displayData:
-    sortBy: default
-    rows: 1
-    cols: 1
-    collapsed: false
-    hideForGuests: false
-- name: IT INFRA
-  icon: fas fa-rocket
-  displayData:
-    sortBy: default
-    rows: 1
-    cols: 1
-    collapsed: false
-    hideForGuests: false
-  items:
-  - &id008
-    title: ZIMBRA ADMIN
-    icon: favicon
-    url: https://192.168.35.203:7071/zimbraAdmin/
-    id: 0_557_zimbraadmin
-  - &id009
-    title: Akses CCTV
-    icon: favicon
-    url: http://192.168.20.2/
-    target: newtab
-    id: 1_557_aksescctv
-  filteredItems:
-  - *id008
-  - *id009
-  widgets:
-  - type: iframe
-    options:
-      url: http://192.168.30.147:3000/livechat
-      height: 600
-  - type: clock
-    options:
-      format: HH:mm:ss
-      timezone: Asia/Jakarta
+  - name: PINUS MERAH ABADI
+    icon: fas fa-rocket
+    items:
+      - &ref_0
+        title: Hc Portal
+        description: Web Absensi PMA
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://hcportal.nabatisnack.co.id/login/emplogin
+        target: newtab
+        id: 0_1165_hcportal
+      - &ref_1
+        title: NGS
+        description: Web Bantuan Dari Nabati
+        icon: favicon
+        url: https://ngs.nabatigroup.com/login
+        target: newtab
+        id: 1_1165_ngs
+      - &ref_2
+        title: EDS
+        icon: favicon
+        url: https://eds.nabatisnack.co.id/
+        target: newtab
+        id: 2_1165_eds
+      - &ref_3
+        title: OFR
+        icon: favicon
+        url: http://ofr.pinusmerahabadi.co.id/
+        target: newtab
+        id: 3_1165_ofr
+      - &ref_4
+        title: PODS
+        icon: favicon
+        url: https://pods.pinusmerahabadi.co.id/dashboard
+        target: newtab
+        id: 4_1165_pods
+      - &ref_5
+        title: EDOT
+        icon: favicon
+        url: https://eds.nabatisnack.co.id/login
+        target: newtab
+        id: 5_1165_edot
+      - &ref_6
+        title: Cloud Pinus
+        description: File Sharing PMA
+        icon: favicon
+        url: https://cloud.pinusmerahabadi.co.id/
+        target: newtab
+        id: 6_1165_cloudpinus
+      - &ref_7
+        title: PODS
+        icon: favicon
+        url: https://pods.pinusmerahabadi.co.id/login
+        id: 7_1165_pods
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+      - *ref_6
+      - *ref_7
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: IT INFRA
+    icon: fas fa-rocket
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_8
+        title: ZIMBRA ADMIN
+        icon: favicon
+        url: https://192.168.35.203:7071/zimbraAdmin/
+        id: 0_557_zimbraadmin
+      - &ref_9
+        title: Akses CCTV
+        icon: favicon
+        url: http://192.168.20.2/
+        target: newtab
+        id: 1_557_aksescctv
+      - &ref_10
+        title: Nagios
+        icon: favicon
+        url: http://192.168.35.100/nagios/
+        id: 2_557_nagios
+      - &ref_11
+        title: Polycd
+        icon: favicon
+        url: http://mail.pinusmerahabadi.co.id:8081/webui/policy-group-main.php
+        id: 3_557_polycd
+      - &ref_12
+        title: Portal Switch Aruba
+        icon: favicon
+        url: >-
+          https://portal.instant-on.hpe.com/login#/login?returnUrl=/site/50f63391-28d0-428e-bc96-75d8e6863b81/home/view/clients
+        id: 4_557_portalswitcharuba
+    filteredItems:
+      - *ref_8
+      - *ref_9
+      - *ref_10
+      - *ref_11
+      - *ref_12
+    widgets:
+      - type: iframe
+        options:
+          url: http://192.168.30.147:3000/livechat
+          height: 600
+        id: 0_557_iframe
+      - type: clock
+        options:
+          format: HH:mm:ss
+          timezone: Asia/Jakarta
+        id: 1_557_clock
+  - name: WEB BUILD
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_13
+        title: Web Asset & Support
+        icon: favicon
+        url: http://192.168.30.147/
+        id: 0_622_webassetsupport
+      - &ref_14
+        title: IT SUPPORT
+        icon: favicon
+        url: http://10.1.61.185/login
+        id: 1_622_itsupport
+    filteredItems:
+      - *ref_13
+      - *ref_14
