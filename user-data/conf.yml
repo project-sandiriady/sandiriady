@@ -1,47 +1,94 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
-  navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+  title: SANDI RIADY
+  description: Welcome My Dashboard
+  navLinks: []
 appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+  theme: callisto
+  layout: vertical
+  iconSize: medium
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: PINUS MERAH ABADI
+    icon: fas fa-rocket
+    items:
+      - &ref_0
+        title: Hc Portal
+        description: Web Absensi PMA
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://hcportal.nabatisnack.co.id/login/emplogin
+        target: newtab
+        id: 0_1165_hcportal
+      - &ref_1
+        title: NGS
+        description: Web Bantuan Dari Nabati
+        icon: favicon
+        url: https://ngs.nabatigroup.com/login
+        target: newtab
+        id: 1_1165_ngs
+      - &ref_2
+        title: EDS
+        icon: favicon
+        url: https://eds.nabatisnack.co.id/
+        target: newtab
+        id: 2_1165_eds
+      - &ref_3
+        title: OFR
+        icon: favicon
+        url: http://ofr.pinusmerahabadi.co.id/
+        target: newtab
+        id: 3_1165_ofr
+      - &ref_4
+        title: PODS
+        icon: favicon
+        url: https://pods.pinusmerahabadi.co.id/dashboard
+        target: newtab
+        id: 4_1165_pods
+      - &ref_5
+        title: EDOT
+        icon: favicon
+        url: https://eds.nabatisnack.co.id/login
+        target: newtab
+        id: 5_1165_edot
+      - &ref_6
+        title: Cloud Pinus
+        description: File Sharing PMA
+        icon: favicon
+        url: https://cloud.pinusmerahabadi.co.id/
+        target: newtab
+        id: 6_1165_cloudpinus
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+      - *ref_6
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: IT INFRA
+    icon: fas fa-rocket
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_7
+        title: ZIMBRA ADMIN
+        icon: favicon
+        url: https://192.168.35.203:7071/zimbraAdmin/
+        id: 0_557_zimbraadmin
+      - &ref_8
+        title: Akses CCTV
+        icon: favicon
+        url: http://192.168.20.2/
+        target: newtab
+        id: 1_557_aksescctv
+    filteredItems:
+      - *ref_7
+      - *ref_8
