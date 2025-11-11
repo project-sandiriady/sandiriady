@@ -1,201 +1,52 @@
-pageInfo:
-  title: SANDI RIADY
-  description: Welcome My Dashboard
-  navLinks: []
 appConfig:
-  theme: callisto
-  layout: vertical
+  theme: dark
+  layout: auto
   iconSize: medium
-  startingView: default
-  defaultOpeningMethod: newtab
-  statusCheck: false
-  statusCheckInterval: 0
-  faviconApi: yandex
-  routingMode: history
-  enableMultiTasking: false
-  widgetsAlwaysUseProxy: false
-  webSearch:
-    disableWebSearch: false
-    searchEngine: google
-    openingMethod: newtab
-    searchBangs: {}
-  enableFontAwesome: true
-  enableMaterialDesignIcons: false
-  hideComponents:
-    hideHeading: false
-    hideNav: false
-    hideSearch: false
-    hideSettings: false
-    hideFooter: false
-  auth:
-    enableGuestAccess: false
-    users: []
-    enableOidc: false
-    oidc:
-      adminRole: 'false'
-      adminGroup: 'false'
-    enableHeaderAuth: false
-    headerAuth:
-      userHeader: REMOTE_USER
-      proxyWhitelist: []
-    enableKeycloak: false
-  showSplashScreen: false
-  preventWriteToDisk: false
-  preventLocalSave: false
-  disableConfiguration: false
-  disableConfigurationForNonAdmin: false
-  allowConfigEdit: true
-  enableServiceWorker: false
-  disableContextMenu: false
-  disableUpdateChecks: false
-  disableSmartSort: false
-  enableErrorReporting: false
+  language: id
+pageInfo:
+  title: Portal IT PMA
+  description: Dashboard Internal IT
 sections:
-  - name: PINUS MERAH ABADI
-    icon: fas fa-rocket
+  - name: Aplikasi Utama
     items:
-      - &ref_0
-        title: Hc Portal
-        description: Web Absensi PMA
-        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-        url: https://hcportal.nabatisnack.co.id/login/emplogin
-        target: newtab
-        id: 0_1165_hcportal
-      - &ref_1
-        title: NGS
-        description: Web Bantuan Dari Nabati
-        icon: favicon
-        url: https://ngs.nabatigroup.com/login
-        target: newtab
-        id: 1_1165_ngs
-      - &ref_2
-        title: EDS
-        icon: favicon
-        url: https://eds.nabatisnack.co.id/
-        target: newtab
-        id: 2_1165_eds
-      - &ref_3
-        title: OFR
-        icon: favicon
-        url: http://ofr.pinusmerahabadi.co.id/
-        target: newtab
-        id: 3_1165_ofr
-      - &ref_4
-        title: PODS
-        icon: favicon
-        url: https://pods.pinusmerahabadi.co.id/dashboard
-        target: newtab
-        id: 4_1165_pods
-      - &ref_5
-        title: EDOT
-        icon: favicon
-        url: https://eds.nabatisnack.co.id/login
-        target: newtab
-        id: 5_1165_edot
-      - &ref_6
-        title: Cloud Pinus
-        description: File Sharing PMA
-        icon: favicon
-        url: https://cloud.pinusmerahabadi.co.id/
-        target: newtab
-        id: 6_1165_cloudpinus
-      - &ref_7
-        title: PODS
-        icon: favicon
-        url: https://pods.pinusmerahabadi.co.id/login
-        id: 7_1165_pods
-    filteredItems:
-      - *ref_0
-      - *ref_1
-      - *ref_2
-      - *ref_3
-      - *ref_4
-      - *ref_5
-      - *ref_6
-      - *ref_7
+      - title: GLPI
+        icon: fas fa-ticket-alt
+        url: http://192.168.220.133/glpi
+      - title: ERPNext
+        icon: fas fa-cogs
+        url: http://192.168.220.133/erpnext
+      - title: n8n
+        icon: fas fa-project-diagram
+        url: http://192.168.220.133/n8n
+      - title: Rocket.Chat
+        icon: fas fa-comments
+        url: http://192.168.220.133/chat
+  - name: Widgets
     displayData:
       sortBy: default
       rows: 1
       cols: 1
       collapsed: false
       hideForGuests: false
-  - name: IT INFRA
-    icon: fas fa-rocket
-    displayData:
-      sortBy: default
-      rows: 1
-      cols: 1
-      collapsed: false
-      hideForGuests: false
-    items:
-      - &ref_8
-        title: ZIMBRA ADMIN
-        icon: favicon
-        url: https://192.168.35.203:7071/zimbraAdmin/
-        id: 0_557_zimbraadmin
-      - &ref_9
-        title: Akses CCTV
-        icon: favicon
-        url: http://192.168.20.2/
-        target: newtab
-        id: 1_557_aksescctv
-      - &ref_10
-        title: Nagios
-        icon: favicon
-        url: http://192.168.35.100/nagios/
-        id: 2_557_nagios
-      - &ref_11
-        title: Polycd
-        icon: favicon
-        url: http://mail.pinusmerahabadi.co.id:8081/webui/policy-group-main.php
-        id: 3_557_polycd
-      - &ref_12
-        title: Portal Switch Aruba
-        icon: favicon
-        url: >-
-          https://portal.instant-on.hpe.com/login#/login?returnUrl=/site/50f63391-28d0-428e-bc96-75d8e6863b81/home/view/clients
-        id: 4_557_portalswitcharuba
-    filteredItems:
-      - *ref_8
-      - *ref_9
-      - *ref_10
-      - *ref_11
-      - *ref_12
     widgets:
-      - type: iframe
-        options:
-          url: http://192.168.30.147:3000/livechat
-          height: 600
-        id: 0_557_iframe
       - type: clock
         options:
-          format: HH:mm:ss
-          timezone: Asia/Jakarta
-        id: 1_557_clock
-  - name: WEB BUILD
-    displayData:
-      sortBy: default
-      rows: 1
-      cols: 1
-      collapsed: false
-      hideForGuests: false
-    items:
-      - &ref_13
-        title: Web Asset & Support
-        icon: favicon
-        url: http://192.168.30.147/
-        id: 0_622_webassetsupport
-      - &ref_14
-        title: IT SUPPORT
-        icon: favicon
-        url: http://10.1.61.185/login
-        id: 1_622_itsupport
-      - &ref_15
-        title: WEB CHAT
-        icon: favicon
-        url: http://192.168.30.147:3000/
-        id: 2_622_webchat
-    filteredItems:
-      - *ref_13
-      - *ref_14
-      - *ref_15
+          timeZone: Asia/Jakarta
+          format: id-ID
+          hideDate: false
+      - type: joke
+        options:
+          language: en
+          category: programming
+      - type: public-holidays
+        options:
+          country: ID
+          holidayType: all
+          monthsToShow: 5
+      - type: public-ip
+        options:
+          provider: ipapi.co
+      - type: github-profile-stats
+        options:
+          username: dr460nf1r3
+          hideLanguagesCard: true
