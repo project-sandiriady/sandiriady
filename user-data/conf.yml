@@ -1,52 +1,52 @@
 appConfig:
-  theme: dark
-  layout: auto
   iconSize: medium
   language: id
+  layout: auto
+  theme: dark
 pageInfo:
-  title: Portal IT PMA
   description: Dashboard Internal IT
+  title: Portal IT PMA
 sections:
-  - name: Aplikasi Utama
-    items:
-      - title: GLPI
-        icon: fas fa-ticket-alt
-        url: http://192.168.220.133/glpi
-      - title: ERPNext
-        icon: fas fa-cogs
-        url: http://192.168.220.133/erpnext
-      - title: n8n
-        icon: fas fa-project-diagram
-        url: http://192.168.220.133/n8n
-      - title: Rocket.Chat
-        icon: fas fa-comments
-        url: http://192.168.220.133/chat
-  - name: Widgets
-    displayData:
-      sortBy: default
-      rows: 1
-      cols: 1
-      collapsed: false
-      hideForGuests: false
-    widgets:
-      - type: clock
-        options:
-          timeZone: Asia/Jakarta
-          format: id-ID
-          hideDate: false
-      - type: joke
-        options:
-          language: en
-          category: programming
-      - type: public-holidays
-        options:
-          country: ID
-          holidayType: all
-          monthsToShow: 5
-      - type: public-ip
-        options:
-          provider: ipapi.co
-      - type: github-profile-stats
-        options:
-          username: dr460nf1r3
-          hideLanguagesCard: true
+- items:
+  - icon: fas fa-ticket-alt
+    title: GLPI
+    url: http://192.168.220.133/glpi
+  - icon: fas fa-cogs
+    title: ERPNext
+    url: http://192.168.220.133/erpnext
+  - icon: fas fa-project-diagram
+    title: n8n
+    url: http://192.168.220.133/n8n
+  - icon: fas fa-comments
+    title: Rocket.Chat
+    url: http://192.168.220.133/chat
+  name: Aplikasi Utama
+- displayData:
+    collapsed: false
+    cols: 1
+    hideForGuests: false
+    rows: 1
+    sortBy: default
+  name: Widgets
+  widgets:
+  - options:
+      format: id-ID
+      hideDate: false
+      timeZone: Asia/Jakarta
+    type: clock
+  - options:
+      category: programming
+      language: en
+    type: joke
+  - options:
+      country: ID
+      holidayType: all
+      monthsToShow: 5
+    type: public-holidays
+  - options:
+      provider: ipapi.co
+    type: public-ip
+  - options:
+      hideLanguagesCard: true
+      username: dr460nf1r3
+    type: github-profile-stats
